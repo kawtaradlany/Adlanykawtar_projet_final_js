@@ -46,17 +46,26 @@ if (userEmail.includes(' ')) {
 // !age
 let userAge=prompt("insert your age!")
 userAge=parseInt (userAge.trim());
+// if (isNaN(userAge) || userAge.toString().length === 0 || userAge.toString().length >= 3) {
+    
+// }
 while (isNaN(userAge) || userAge.toString().length === 0 || userAge.toString().length >= 3) {
     userAge=prompt("insert only numbers!")
     userAge=parseInt (userAge.trim());
 }
 console.log(userAge);
-
-
+// ! mdp
+let mdp=prompt("insert your mdp")
+mdp = mdp.trim()
+while (mdp.includes(` `) ||!(/[@#*+\-\/]/.test(mdp) && mdp.length >= 7)) {
+    mdp=prompt("entrer encore une fois ton mdp")
+}
 
 }
 
 
-// - Vérifiez les espaces de début, de fin ou du milieu.
-//              - Vérifiez que seuls des chiffres sont saisis.
-//              - Ne sauvegardez pas l'âge s'il comporte 0 caractère ou s'il comporte 3 caractères ou plus.
+// # Mot de passe:
+//              - Vérifiez les espaces de début ou de fin.
+//              - N'enregistrez pas le mot de passe s'il comporte des espaces au milieu.
+//              - Exiger au moins un caractère spécial de l'ensemble : ["@", "#", "-", "+", "*", "/"].
+//              - Exiger au moins 7 caractères pour confirmer le mot de passe.
