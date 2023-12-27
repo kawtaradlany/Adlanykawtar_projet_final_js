@@ -93,7 +93,21 @@ while (mdp!== confmdp) {
         }else{
             alert("l'operation invalide")
         }
+        // !depose
+    }else if (serviceChoice === "Déposer de l'argent"){
+        let montanDéposer=parseInt.prompt("entrez le monton que vous voulez déposer") 
+        if (montanDéposer <=1000 ) {
+            
+            montanDéposer.push(soldebank)
+            let Mtotal=soldebank+=montanDéposer
+            alert("retrait validé, votre nouveau solde:" + Mtotal + "dh")
+        }else{
+            alert("l'operation invalide")
+        }
     }
+
+
+    
     }
     
 }
