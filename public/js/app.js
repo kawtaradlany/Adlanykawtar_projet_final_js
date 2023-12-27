@@ -1,6 +1,6 @@
-let first = prompt("chose what u need : 7 sign-up, login, forget password");
+let first = prompt("chose what u need :  signup, login, forgetpassword");
 let userDb=[];
-if (first == "7") {
+if (first == "signup") {
 // !fullname
     // let fullName = prompt("enter your FullName")
     // while (fullName.length < 5) {
@@ -66,6 +66,12 @@ while (mdp!== confmdp) {
         console.log("Bienvenue !");
     } else {
         console.log("Veuillez vérifier votre e-mail ou votre mot de passe.");
+    }
+
+}else if (first== forgetpassword){
+    let forgetpassword = prompt("Entrez votre adresse e-mail ?")
+    while (forgetpassword == userDb) {
+        let forgetpassword = prompt("Entrez votre adresse e-mail ?")
     }
 
 }
