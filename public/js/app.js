@@ -7,7 +7,7 @@ if (first == "signup") {
         fullName = prompt("enter your FullName")
     }
     
-    if (fullName.match("regex")) {
+    if (/^[a-z]+$/.test(fullName) ) {
         fullName = prompt("enter your FullName")
     }
 
