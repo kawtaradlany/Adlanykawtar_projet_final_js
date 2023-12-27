@@ -78,16 +78,22 @@ while (mdp!== confmdp) {
     let userlogin=userDb.find(user => user.email=== logEmail)
     if (userlogin && userlogin.password === logMdp) {
         console.log("Bienvenue !");
+        // !soldebank
         let soldebank=1000;
         alert("votre solde et "+ soldebank + "dh")
+        let serviceChoice= prompt("écrivez votre besoin : Se déconnecter,Retirer de l'argent, Déposer de l'argent, Prendre un prêt, Investir, Histoire: ")
+    if (serviceChoice == "se déconnecter") {
+        let first = prompt("chose what u need :  signup, login, forgetpassword");
+        // !retirer l'argent
+    }else if (serviceChoice === "Retirer de l'argent"){
+        let montanRéduit=parseInt.prompt("entrez le monton que vous voulez retirer") 
+        if (montanRéduit <= soldebank ) {
+            let result= montanRéduit-=soldebank
+            alert("retrait validé, votre nouveau solde:" + result + "dh")
+        }else{
+            alert("l'operation invalide")
+        }
     }
+    }
+    
 }
-
-// let serviceChoice
-// do {
-//  serviceChoice= prompt("écrivez votre besoin : Se déconnecter,Retirer de l'argent, Déposer de l'argent, Prendre un prêt, Investir, Histoire: ")
-//  if (serviceChoice == "se déconnecter") {
-//      let first = prompt("chose what u need :  signup, login, forgetpassword");
-     
-// } while (condition);
- 
